@@ -18,8 +18,8 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   
-  - task: TerraformCLI@0
-    inputs:
+- task: TerraformCLI@0
+  inputs:
       command: 'init'
       workingDirectory: '$(System.DefaultWorkingDirectory)/azure-terraform/kubernetes'
       backendType: 'azurerm'
