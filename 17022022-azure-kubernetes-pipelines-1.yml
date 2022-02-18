@@ -17,3 +17,17 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+  
+  - task: TerraformCLI@0
+    inputs:
+      command: 'init'
+      workingDirectory: '$(System.DefaultWorkingDirectory)esaulmqzg/cursoDevOps/azure-terraform/kubernetes'
+      backendType: 'azurerm'
+      backendServiceArm: 'Azure-resource-Esaul'
+      ensureBackend: true
+      backendAzureRmResourceGroupName: 'terraform-backend-rg'
+      backendAzureRmResourceGroupLocation: 'westeurope'
+      backendAzureRmStorageAccountName: 'storageacctesaul'
+      backendAzureRmContainerName: 'storageacctesaulcontainer'
+      backendAzureRmKey: 'Kubernetes-dev.tfstate'
+      allowTelemetryCollection: true
