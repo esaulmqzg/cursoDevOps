@@ -35,8 +35,8 @@ steps:
     backendAzureRmContainerName: 'storageacctesaulcontainer'
     backendAzureRmKey: 'Kubernetes-dev.tfstate'
     allowTelemetryCollection: true
-- task: TerraformCLI@0 
-  inputs: 
+- task: TerraformCLI@0
+  inputs:
     command: 'apply'
     workingDirectory: '$(System.DefaultWorkingDirectory)/azure-terraform/kubernetes'
     environmentServiceName: 'Azure-resource-Esaul'
