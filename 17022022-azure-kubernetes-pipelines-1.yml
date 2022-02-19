@@ -40,6 +40,5 @@ steps:
     command: 'apply'
     workingDirectory: '$(System.DefaultWorkingDirectory)/azure-terraform/kubernetes'
     environmentServiceName: 'Azure-resource-Esaul'
-    runAzLogin: true
     commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(publickey.secureFilePath)'
     allowTelemetryCollection: true
